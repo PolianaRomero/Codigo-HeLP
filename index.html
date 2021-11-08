@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>heLP</title>
+  <link rel="shortcut icon" href="img/google.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <b></b>
+        <b></b>
+        <a href="index.html">
+          <span class="icon"><img src="img/home (1).png" alt=""></span>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-gmail.html">
+          <span class="icon"><img src="img/gmail.png" alt="gmail"></span>
+          <span class="title">Gmail</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-drive.html">
+          <span class="icon"><img src="img/google-drive.png" alt="drive"></span>
+          <span class="title">Google Drive</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-calendar.html">
+          <span class="icon"><img src="img/calendar.png" alt="Agenda"></ion-icon></span>
+          <span class="title">Google Agenda</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-classroom.html">
+          <span class="icon"><img src="img/google-classroom.png" alt=""></span>
+          <span class="title">Google Classroom</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-sheets.html">
+          <span class="icon"><img src="img/folhas-do-google.png" alt=""></span>
+          <span class="title">Google Planilhas</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-docs.html">
+          <span class="icon"><img src="img/google-docs.png" alt=""></span>
+          <span class="title">Google Docs</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-meet.html">
+          <span class="icon"><img src="img/hangout.png" alt=""></span>
+          <span class="title">Google Meet</span>
+        </a>
+      </li>
+      <li class="list">
+        <b></b>
+        <b></b>
+        <a href="html/page-all-options.html">
+          <span class="icon"><img src="img/plus (1).png" alt=""></span>
+          <span class="title">Mais opções</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  <div class="container">
+    <h1>heLP</h1>
+    <h2>Nosso objetivo</h2>
+    <p>Website que apresenta as funções e ensina as pessoas a usar alguns dos APPs do Pacote G Suite. Após o início da pandemia a sociedade precisou adaptar-se a um novo estilo de vida, dentre essas adaptações temos o home office e o Ead. Pensando em pessoas que encontraram dificuldades em ajustar-se a essa nova realidade percebemos a necessidade de criar um "manual" que mostrasse os recursos de alguns desses apps e ensiná-las a utilizá-los. 
+    </p>
+      <h3>OBJETIVOS</h3> 
+      <p>
+        <p>● Capacitar pessoas para a utilização de ferramentas para trabalho, estudo, ou interesses pessoais</p>
+        <p> ● Indicar APPs úteis.</p>
+          <p>● Analisar os APPs do Google;</p>
+            <p>● Avaliar se são úteis para o público alvo;</p>
+              <p>● Apontar para o que podem ser utilizados;</p>
+                <p>● Ensinar como utilizar os APPs Google;</p>
+      </p>
+  </div>
+  <div class="pressionado">
+    <img src="img/close.png" class="icon close" alt="">
+    <img src="img/menu (1).png" class="icon open" alt="">
+  </div>
+
+  <script>
+
+    let menuPressionado = document.querySelector('.pressionado')
+    let navigation = document.querySelector('.navigation')
+    menuPressionado.onclick = function(){
+      menuPressionado.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+
+
+    let list = document.querySelectorAll('.list')
+    
+    for(let i = 0; i<list.length;i++){
+      list[i].onclick = function(){
+        let j = 0;
+        while(j < list.length){
+          list[j++].className = 'list'
+        }
+        list[i].className = 'list active'
+      }
+    }
+</script>
+
+<button>Change user</button>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>
